@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import numpy as np
 from math import ceil, floor
 
@@ -102,7 +104,7 @@ def imresize(I, scalar_scale=None, output_shape=None, mode="vec"):
         scale = deriveScaleFromSize(I.shape, output_shape)
         output_size = list(output_shape)
     else:
-        print 'Error: scalar_scale OR output_shape should be defined!'
+        print('Error: scalar_scale OR output_shape should be defined!')
         return
     scale_np = np.array(scale)
     order = np.argsort(scale_np)
